@@ -1,0 +1,98 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+emailFld{
+	color: #FFF;
+	padding: 0px;
+	
+	margin-right: 60px;
+	
+	text-decoration: none;
+	font-size: 20px;
+}
+
+passFld{
+	color: #FFF;
+	padding: 0px;
+	
+	text-decoration: none;
+	font-size: 20px;
+	margin-top: 10px;
+	margin-right: 160px;
+}
+
+#nav{
+	width: 100%;
+	height: 40px;
+	background: #7EC3EA;
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+#container{
+	float: right;
+	margin-right: 50px;
+}
+
+a{
+	text-decoration: none;
+}
+
+.page{
+	background-color: white;
+	padding: 20px;
+	padding-bottom: 1px;
+	margin-top: 20px;
+	width: 1560px;
+	height: 660px;
+	margin: 0 auto;
+	border: 1px solid #f0f0f0;
+}
+
+</style>
+
+</head>
+<body>
+<%@include file="Header.jsp" %>
+
+<div id="nav">
+	               
+</div>
+<div class="page">
+	<div id="container">
+		<form action="login" method="post" name="formLogin" onsubmit="">
+			<div class="emailFld">
+			<input type="text" id="userName" name="userName" placeholder="Username or Email" >		
+			</div>
+			<br>
+			<div class="passFld">
+			<input type="password" id="password" name="password" placeholder="Password">
+			</div>  
+			<br>
+		
+			<input type="submit" value="Login" >
+			<a href="RegForm.jsp" class=""> Register Here </a>	
+		</form>
+		
+		<div class="checkbox">
+				<input id="remember" type="checkbox">
+				<label for="remember">Remember me on this computer</label>
+		</div>
+		<a href="#" class="forgot_password">Forgot password?</a>
+		
+						
+	 </div>	
+
+
+</div>
+
+<%@include file="Footer.jsp" %>
+</body>
+</html>

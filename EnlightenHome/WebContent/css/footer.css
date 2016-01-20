@@ -1,0 +1,11 @@
+#footer{
+	background-color: black;
+	height: 20px;
+	width: 100%;
+	color: white;
+	padding-bottom: 2px;
+	clear: both;
+	border-bottom-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-radius: 6px; 
+}

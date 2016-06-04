@@ -1,6 +1,10 @@
 # EnlightenHome
 estate-management-
 
-Developed using jdbc, jsp, and servlet technology
-the MVC arch is partially-utilised
+Tech Stack
+ HTML 5
+ CSS 3
+ jsp, jdbc, servlet technology
+ MVC architecture
+
 still work in progress and will welcome all your reviews and suggestions

@@ -33,7 +33,6 @@ public class ImageServlet extends HttpServlet {
 			con = DButil.getConnection();
 			ps = con.prepareStatement(sql);
 
-
 				ps.setLong(1, Integer.valueOf(request.getParameter("Property_Id")));
 				ps.setLong(2, Integer.valueOf(request.getParameter("Category_Id")));
 				ps.setString(3, request.getParameter("Country"));
@@ -49,15 +48,14 @@ public class ImageServlet extends HttpServlet {
 					//response.getOutputStream().write(rs.getBytes("Image"));
 				}
 
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		
+
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 	}
 

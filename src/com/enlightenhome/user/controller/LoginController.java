@@ -20,7 +20,7 @@ public class LoginController extends HttpServlet {
         super();
     }
 
-	/
+
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		processRequest(request, response);
@@ -41,6 +41,7 @@ public class LoginController extends HttpServlet {
 
 			if (Email_Id == null ||  Password == null || Member_Category_Id == null) {
 
+
 				path="LoginSignup.jsp";
 				//path="LoginSignup.jsp?msg=Invalid Access";
 			}
@@ -57,9 +58,11 @@ public class LoginController extends HttpServlet {
 				IUserRegisterDao usr = new IUserRegisterDaoImpl();
 				isExist = usr.userLogin(Email_Id, Password, Member_Category_Id);
 
+
 				if(isExist){
 					session=request.getSession(false);
 					session.setAttribute("email", Email_Id);
+
 
 					if("1".equals(Member_Category_Id)){
 						path = "Member.jsp";
@@ -74,7 +77,9 @@ public class LoginController extends HttpServlet {
 				}
 			}
 
+
 			request.getRequestDispatcher(path).forward(request, response);
+
 
 		} catch (Exception e) {
 			e.getMessage();

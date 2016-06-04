@@ -20,16 +20,17 @@ import com.enlightenhome.dao.util.DButil;
 public class UploadServlet_Seller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+
 	//private static final int BUFFER_SIZE = 4096;
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
 		Connection con = null;
 		String message = null;
 		String sql = "insert into property_details values (?,?,?,?,?,?,?,?,?,?,?)";
 		PreparedStatement ps = null;
-		
 
 		try {
 
@@ -52,6 +53,7 @@ public class UploadServlet_Seller extends HttpServlet {
 				System.out.println(filePart.getSize());
 				System.out.println(filePart.getContentType());
 
+
 				inputStream = filePart.getInputStream();
 			}
 
@@ -72,11 +74,9 @@ public class UploadServlet_Seller extends HttpServlet {
                 //here we're letting the JDBC driver
                 //create a blob object based on the
                 //input stream that contains the data of the file
-
 				ps.setBlob(11, inputStream);
 			}
 			//send stmt to db server
-
 			int row = ps.executeUpdate();
 			if(row > 0){
 				message = "file uploaded and saved in database";
@@ -86,7 +86,6 @@ public class UploadServlet_Seller extends HttpServlet {
 			out.println("<font color='blue' >" + message +"</font>");
 			out.println("<font color='bue'><a href='Seller.jsp'>BACK</a></font>");
 			out.close();
-
 
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -21,7 +21,6 @@ public class AdminLogoutController extends HttpServlet {
 	}
 
 	protected void processRequestt(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
 
 		response.setContentType("text/html");
 		Cookie adminCookie = null;
